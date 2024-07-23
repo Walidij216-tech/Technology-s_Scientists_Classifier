@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology's Scientists Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost:5000/UI/dropzone.min.css">
+    <link rel="stylesheet" href="http://localhost:5000/UI/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Technology's Scientists Classifier</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+        <div class="col card-wrapper" data-scientist="elon_mask">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="http://localhost:5000/server/test_images/elon_mask.jfif" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Elon Mask</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>            
+            <div class="col card-wrapper" data-scientist="larry_page">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="http://localhost:5000/server/test_images/larry_page.jpg" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Larry Page</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>            
+            <div class="col card-wrapper" data-scientist="mark_zuckerberg">
+                    <div class="card border-0">
+                        <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                            <img class="w-100 h-100" src="http://localhost:5000/server/test_images/mark.jfif" alt="Card image cap">
+                        </div>
+                        <div class="card-body text-center mt-4">
+                            <h4 class="text-uppercase card-title">Mark Zuckerberg</h4>
+                            </p>
+                        </div>
+                    </div>
+            </div>          
+
+            <div class="col card-wrapper" data-scientist="sergey_brin">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="http://localhost:5000/server/test_images/sergey_brin.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Sergey Brin</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>      
+
+            <div class="col card-wrapper" data-scientist="steve_jobs">
+                <div class="card border-0">
+                    <div class="position-relative rounded-circle overflow-hidden mx-auto custom-circle-image">
+                        <img class="w-100 h-100" src="http://localhost:5000/server/test_images/steve_jobs.jpg" alt="Card image cap">
+                    </div>
+                    <div class="card-body text-center mt-4">
+                        <h4 class="text-uppercase card-title">Steve Jobs</h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-12 mx-auto">
+                        <form action="http://127.0.0.1:5000/classify_image" class="dropzone" id="dropzone">
+                            <div class="dz-message needsclick">
+                                <img src="data:image/png;base64,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" width="50vw" height="50vw"><br>
+                                <span class="note needsclick">Drop files here or click to upload</span>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3 mx-auto">
+                        <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-8 error" id="error" >
+                <p>Can't classify image. Classifier was not able to detect face and two eyes properly</p>    
+            </div>
+
+            <div class="col-sm-4" id="resultHolder">
+            </div>
+            <div class="col-sm-4" id="divClassTable">
+                <table id="classTable">
+                        <tr>
+                            <th>Scientist</th>
+                            <th>Probability Score</th>
+                        </tr>
+                        <tr>
+                            <td>Elon Mask</td>
+                            <td id="score_elon_mask"></td>
+                        </tr>
+                        <tr>
+                            <td>Larry Page</td>
+                            <td id="score_larry_page"></td>
+                        </tr>
+                        <tr>
+                            <td>Mark Zuckerberg</td>
+                            <td id="score_mark_zuckerberg"></td>
+                        </tr>
+                        <tr>
+                            <td>Sergey Brin</td>
+                            <td id="score_sergey_brin"></td>
+                        </tr>
+                        <tr>
+                            <td>Steve Jobs</td>
+                            <td id="score_steve_jobs"></td>
+                        </tr>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="http://localhost:5000/UI/dropzone.min.js"></script>
+<script src="http://localhost:5000/UI/app.js"></script>
+</html>
